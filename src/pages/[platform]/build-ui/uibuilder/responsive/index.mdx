@@ -34,7 +34,7 @@ export function getStaticProps(context) {
 
 You can use Amplify Studio to dynamically toggle between different component variants based on your app's breakpoint. For example, you can have the navigation bar shrink to a smaller size as the window gets smaller.
 
-![GIF showing a responsive header design](/images/studio/responsive/responsive-header.gif)
+ 
 
 ## 1. Set your preferred breakpoints in Figma
 
@@ -57,10 +57,10 @@ By default, all Amplify UI provides the following [breakpoints as part of the Am
 Breakpoints are set at the [Amplify UI Theme](https://ui.docs.amplify.aws/react/theming/responsive) level, which means they apply to all components in your Figma file. You can customize these breakpoints using the Amplify Theme Editor plugin:
 
 1. Right click in your Figma project and select <strong>Plugins</strong> > <strong>AWS Amplify Theme Editor</strong>
-![Context menu showing how to view plugins and select the AWS Amplify Theme Editor](/images/studio/responsive/theme-editor.png)
+ 
 
 2. Select the <strong>Breakpoints</strong> tab and click on any breakpoint to customize the pixel value
-![AWS Amplify Theme Editor with the Breakpoints tab selected](/images/studio/responsive/breakpoints.png)
+ 
 
 The grey bar within the outlined box will indicate your pixel value compared to a 1920px-wide display.
 
@@ -76,7 +76,7 @@ If the variants don't have the same structure, then Amplify Studio will not be a
 <br />
 To customize child elements in variants, you can use the eye icon to hide and show elements in different variants.
 
-![Image showing that the component structure needs to be the same](/images/studio/responsive/component-structure2.png)
+ 
 
 </Callout>
 
@@ -84,7 +84,7 @@ When generating a component with variants in Figma, a Property will be created a
 1. Change the component property name to `breakpoint`
 2. For each variant, set `breakpoint`'s value to one of the supported values (e.g. `small`, `xl`, etc)
 
-![Flow showing how to change the the prop name to breakpoint and the value to small](/images/studio/responsive/set-props.png)
+ 
 
 
 ## 3. Render and test your component

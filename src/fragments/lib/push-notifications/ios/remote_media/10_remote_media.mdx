@@ -10,23 +10,23 @@ APNs supports three types of media: [audio, images, and video](#apns-supported-m
 
 1. In your Xcode project, select **File, New, Target...**
 
-![New target](/images/push-notifications/service-extension/01_new-target.png)
+ 
 
 2. Select **Notification Service Extension** and click **Next**.
 
-![Target type](/images/push-notifications/service-extension/02_target-type.png)
+ 
 
 3. Enter a name for your service extension and click **Finish**.
 
-![Target name](/images/push-notifications/service-extension/03_target-name.png)
+ 
 
 4. In project settings, select the service extension target you just added, select the **General** tab, and add **AWSPinpointPushNotificationsPlugin** under **Frameworks and Libraries**.
 
-![Add library](/images/push-notifications/service-extension/04_add-library.png)
+ 
 
 5. When you created the service extension, Xcode created a **NotificationService.swift** file containing some boiler plate code. Locate this file under the service extension's folder and replace it's contents as show below:
 
-![Notification Service](/images/push-notifications/service-extension/05_notification-service.png)
+ 
 
 ```swift
 import AWSPinpointPushNotificationsPlugin

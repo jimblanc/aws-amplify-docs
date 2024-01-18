@@ -165,7 +165,7 @@ If `amplify push` fails, check the CloudFormation event logs for the failing res
 
 **Note:** To debug any issues related to secrets not being correctly copied across environments, refer to [Multi-environment flows](/[platform]/build-a-backend/functions/secrets/#multi-environment-flows) section in the [Access secret values](/[platform]/build-a-backend/functions/secrets/) documentation.
 
-![CloudFormation status logs for a deployment failure of a resource](/images/ts-guide-cfn-error.png)
+ 
 
 ### Push failures from resources exceeding AWS service quotas
 
@@ -226,7 +226,7 @@ type Tag @mode { /** @mode is an invalid directive **/
 
 When running `amplify api gql-compile` the transform step will fail with an invalid directive error.
 
-![Amplify GraphQL schema validation error](/images/ts-guide-gql-schema-validation-error.png)
+ 
 
 ### Troubleshooting other GraphQL schema related errors
 
@@ -292,7 +292,7 @@ Any changes to your application must be performed only through the Amplify CLI a
 
 Amplify automatically creates DynamoDB database tables for GraphQL types annotated with the @model directive in your GraphQL schema. Therefore if you rename models in the GraphQL Schema, to protect the application data from accidental deletion, the Amplify CLI will block subsequent `amplify push` operations and prompt you to explicitly pass the `--allow-destructive-graphql-schema-updates` flag. This flag grants Amplify CLI the ability to make destructive database changes, such as deleting the DynamoDB tables for the original model names and create new tables with the new model names specified in the schema. Amplify currently doesn't support automatic data migration. If the data in the original tables is required, then you will need to backup the DynamoDB tables and migrate the data after the destructive deployment of the new tables.
 
-![Amplify GraphQL model deletion warning](/images/ts-guide-model-deletion-warning.png)
+ 
 
 ### Migration from GraphQL transformer V1 to V2
 

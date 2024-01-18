@@ -38,18 +38,18 @@ You need to have [Android Studio and SDK](https://developer.android.com/studio) 
 
 **Open Android Studio.** Select **+ Create New Project.**
 
-![Shows the Android studio welcome window](/images/lib/getting-started/android/set-up-android-studio-welcome.png)
+ 
 
 In **Select a Project Template**, select **Empty Activity** or **Empty Compose Activity**. Press **Next**.
 
-![Shows Android studio new project window](/images/lib/getting-started/android/set-up-android-studio-select-project-template.png)
+ 
 
 - Enter _MyAmplifyApp_ in the **Name** field
 - Select either _Java_ or _Kotlin_ from the **Language** dropdown menu
 - Select _API 24: Android 7.0 (Nougat)_ from the **Minimum SDK** dropdown menu
 - Press **Finish**
 
-![Shows Android studio configure project window](/images/lib/getting-started/android/set-up-android-studio-configure-your-project.png)
+ 
 
 <Callout info>
   This guide will expect you to use Kotlin DSL for Gradle. If you are using
@@ -855,11 +855,11 @@ For publishing the changes to cloud, you need to create a remote git repository.
 
 Open Xcode and select **Create New Project...**
 
-![Shows the Xcode starter video to start project](/images/lib/getting-started/ios/set-up-swift-1.png)
+ 
 
 In the next step select the **App** template under **iOS**. Click on next.
 
-![Shows the template of apps for iOS](/images/lib/getting-started/ios/set-up-swift-2.png)
+ 
 
 Next steps are:
 
@@ -869,11 +869,11 @@ Next steps are:
 - Select **SwiftUI** an _Interface_.
 - Press **Next**
 
-![Shows the project details dialog](/images/lib/getting-started/ios/set-up-swift-3.png)
+ 
 
 Now you should have your project created.
 
-![Shows the base project for SwiftUI](/images/lib/getting-started/ios/set-up-swift-4.png)
+ 
 
 ### Create Amplify Project
 
@@ -933,19 +933,19 @@ After you have configured the authentication resource, you can use the Amplify U
 
 Open your project in Xcode and select **File > Add Packages...** and add the following dependencies:
 
-![Shows the Amplify library for Swift](/images/lib/getting-started/ios/set-up-swift-5.png)
+ 
 
 - Amplify Library for Swift: Enter its GitHub URL (https://github.com/aws-amplify/amplify-swift), select **Up to Next Major Version** and click **Add Package Dependencies...** and select the following libraries:
 
   - Amplify
   - AWSCognitoAuthPlugin
 
-![Shows the Amplify library for Swift](/images/lib/getting-started/ios/set-up-swift-6.png)
+ 
 
 - Amplify UI Swift - Authenticator: Enter its GitHub URL (https://github.com/aws-amplify/amplify-ui-swift-authenticator), select **Up to Next Major Version** and click **Add Package Dependencies...** and select the following libraries:
   - Authenticator
 
-![Shows the Amplify library for Swift](/images/lib/getting-started/ios/set-up-swift-7.png)
+ 
 
 Now update the `MyAmplifyAppApp` class with the following code:
 
@@ -1039,11 +1039,11 @@ npx amplify generate graphql-client-code --format=modelgen
 
 Move the generated files to your project. You can do this by dragging and dropping the files to your project.
 
-![Shows the drag and drop phase](/images/lib/getting-started/ios/set-up-swift-8.png)
+ 
 
 Once you are done, add the API dependencies to your project. Select **File > Add Package Dependencies...** and add the `AWSAPIPlugin`.
 
-![Shows the Amplify API library for Swift selected](/images/lib/getting-started/ios/set-up-swift-9.png)
+ 
 
 Next, update the `init` part of your `MyAmplifyAppApp.swift` file with the following code:
 

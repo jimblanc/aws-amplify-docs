@@ -23,19 +23,19 @@ Just like with the CLI and Studio in Gen 1, you can use Amplify for end-to-end f
 
 With the Gen-2 DX, you can provision backend infrastructure by authoring TypeScript. In the following diagram, the box at the bottom (outlined in pink), highlights the main difference in how you provision infrastructure compared to Gen 1. In Gen 1, you would use Studio's console or the CLI to provision infrastructure; in Gen 2, you author TypeScript code in files following a file-based convention (such as `amplify/auth/resource.ts` or `amplify/auth/data.ts`). With TypeScript types and classes for resources, you gain strict typing and IntelliSense in Visual Studio Code to prevent errors. A breaking change in the backend code immediately reflects as a type error in the co-located frontend code. The file-based convention follows the "convention over configuration" paradigm—you know exactly where to look for resource definitions when you group them by type in separate files.
 
-![How Amplify capabilities can be used together or independently.](/images/gen2/how-amplify-works/amplify-flow.png)
+ 
 
 ### Faster local development
 
 Per-developer cloud sandbox environments are optimized for faster iterations. Each developer on a team gets an isolated cloud development environment against which they can test their changes. These cloud sandbox environments are meant for local development only, but they deploy high-fidelity AWS backends while you build. Depending on the workflow, iterative updates are now deployed up to 8X faster than Gen-1 deployments. In the diagram below, four developers are able to work on fullstack features independently without disrupting each other's environments.
 
-![How cloud sandbox environments work.](/images/gen2/how-amplify-works/sandbox.png)
+ 
 
 ### Fullstack Git-based environments
 
 With Gen 2, all shared environments (such as `production`, `staging`, `gamma`) map 1:1 to Git branches in your repository. New features can be tested in ephemeral environments with pull request previews (or feature branches) before they are merged into production. Unlike the Gen-1 experience, which requires users to configure a number of steps in the CLI or Console to set up a fullstack environment, the Gen-2 experience is zero-config. Because of our code-first approach, the Git repository is always the source of truth for the state of the fullstack app—all backend resources are defined as code for reproducibility and portability across branches. This, along with central management of environment variables and secrets, simplifies the promotion workflow from lower to upper environments.
 
-![How fullstack deployments work.](/images/gen2/how-amplify-works/fullstack.png)
+ 
 
 ### Unified management console
 
@@ -128,7 +128,7 @@ export default withAuthenticator(App);
 
 Amplify makes it easy to quickly build web app user interfaces using the UI component library, Figma-to-code generation, and CRUD form-generation capabilities. [Learn more.](https://ui.docs.amplify.aws/react/components)
 
-![Screenshot showing Figma to Code](/images/gen2/how-amplify-works/ui.jpg)
+ 
 
 ## Connecting to AWS beyond Amplify
 

@@ -56,8 +56,6 @@ All generated code exposes an `overrides` prop on all components and children to
 
 <Grid templateColumns={{ base: '1fr', large: '240px 1fr' }} gap="small">
   <View maxWidth="240px" margin="auto">
-    ![Overriding the color of a text element called
-    Title](/images/console/ui-override.png)
   </View>
 
          <View minWidth="0">
@@ -89,7 +87,7 @@ The following example shows how to override each collection item to show a diffe
 />
 ```
 
-![Collection item shows a different color based on their index in the collection and alerts the user of which the clicked home](/images/console/collection-override.gif)
+ 
 
 If you want to override a prop for a specific element within a collection item, pass an override object to `overrideItems`.
 
@@ -266,7 +264,7 @@ const iconOverrides = {
 </td>
 <td>
 
-![Hover override using class names](/images/console/hover-override.gif)
+ 
 
 </td>
 </tr>
@@ -285,7 +283,7 @@ Amplify Studio provides [data action bindings](/[platform]/build-ui/uibuilder/ev
 
 Get the override keys based on the element name in Studio and then set `onChange` handlers. For example `TextFieldzoh` is the name of the "name input field" component.
 
-![Studio interface showing the form field names](/images/console/form-override.png)
+ 
 
 ```jsx
 const [name, setName] = useState("");

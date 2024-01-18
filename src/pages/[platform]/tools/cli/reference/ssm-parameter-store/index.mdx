@@ -66,15 +66,15 @@ Developers can now seamlessly move between various environments like different d
 
 In some multi-environment scenarios, it is helpful to create parameters in Parameter Store manually. To do so, head to the AWS Console and search for SSM.
 
-![AWS Console's search with "SSM"](/images/cli/parameter-store/select-ssm-console.png)
+ 
 
 Once the SSM console has been opened, navigate to Parameter Store.
 
-![AWS Systems Manager side navigation with "Parameter Store" highlighted](/images/cli/parameter-store/select-parameter-store.png)
+ 
 
 With Parameter Store opened, select "Create Parameter".
 
-![AWS SSM Parameter Store's landing page with a list of parameters](/images/cli/parameter-store/view-parameter-store.png)
+ 
 
 Amplify parameter keys must follow a strict naming pattern:
 
@@ -84,7 +84,7 @@ Amplify parameter keys must follow a strict naming pattern:
 
 Only Standard parameters with the default String type are supported.
 
-![AWS SSM Parameter Store's "Create Parameter" form with Amplify's parameter naming pattern](/images/cli/parameter-store/create-parameter.png)
+ 
 
 Enter your desired value and be sure to enclose it in quotes. The value will be parsed using [JSON.parse()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse).
 

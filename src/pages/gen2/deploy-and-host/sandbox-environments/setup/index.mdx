@@ -19,7 +19,7 @@ Cloud sandbox environments are not intended for production workloads.
 
 </Callout>
 
-![How cloud sandbox environments work](/images/gen2/how-amplify-works/sandbox.png)
+ 
 
 ## Create a new sandbox environment
 
@@ -33,17 +33,17 @@ npx amplify sandbox
 
 When you deploy a cloud sandbox, Amplify creates an [AWS CloudFormation](https://aws.amazon.com/cloudformation/) stack following the naming convention of `amplify-<app-name>-<$(whoami)>-sandbox` in your AWS account with the resources configured in your `amplify/` folder.
 
-![terminal output of a successful cloud sandbox deployment](/images/gen2/sandbox/sandbox1.png)
+ 
 
 After a successful deployment, `sandbox` watches for file changes in your `amplify/` folder and performs real-time updates to the associated CloudFormation stack. This functionality is built leveraging the [hot swap capability of the AWS Cloud Development Kit (CDK)](https://docs.aws.amazon.com/cdk/v2/guide/cli.html#cli-deploy-hotswap).
 
-![terminal output of a successful cloud sandbox deployments with hot-swapped resources](/images/gen2/sandbox/sandbox2.png)
+ 
 
 ### Terminating a sandbox environment
 
 After testing all the changes associated with the backend, you can terminate the sandbox session via <kbd>Ctrl</kbd>+<kbd>c</kbd> and can then choose whether you want to keep or delete all the resources in the sandbox environment.
 
-![terminal output after exiting sandbox with ctrl+c and prompt for resource deletion](/images/gen2/sandbox/sandbox3.png)
+ 
 
 ## Manage sandbox environments
 
@@ -51,11 +51,11 @@ You can view and manage all the sandbox environments for your team in the new [A
 
 Choose **Manage Sandboxes** to get started:
 
-![Amplify console view with a deployed Amplify app and navigation for "Manage sandboxes"](/images/gen2/sandbox/sandbox4.png)
+ 
 
 You can then check the number, status, and last updates for sandbox environments across your team. You can also use the console to delete sandbox environments when no longer needed.
 
-![Amplify console view for "Manage sandbox" showing one active cloud sandbox](/images/gen2/sandbox/sandbox5.png)
+ 
 
 ## Best practices
 

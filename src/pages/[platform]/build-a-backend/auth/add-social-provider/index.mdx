@@ -63,7 +63,7 @@ The preferred way to incorporate social provider sign-in is via an OAuth redirec
 
 [OAuth 2.0](https://en.wikipedia.org/wiki/OAuth) is the common Authorization framework used by web and mobile applications for accessing user information ("scopes") in a limited manner. Common analogies you will hear in OAuth is that of boarding a plane or staying in a hotel - showing your identification is the authentication piece (signing into an app) and using the boarding pass/hotel key is what you are authorized to access.
 
-OAuth support in Amplify uses Cognito User Pools and supports federation with social providers, which will automatically create a corresponding user in the User Pool after they sign in. With this design you do not need to include an SDK for the social provider in your app. After you set up your developer account with these social providers you can configure the `Auth` category by running `amplify add auth` and selecting the social provider option. You can then use `signInWithRedirect()` in your app to either show a pre-built "Hosted UI" or pass in a provider name (e.g. `signInWithRedirect({provider:'Facebook'})`) to interface directly and build your own UI. ![Image](/images/SocialAuthZ.png)
+OAuth support in Amplify uses Cognito User Pools and supports federation with social providers, which will automatically create a corresponding user in the User Pool after they sign in. With this design you do not need to include an SDK for the social provider in your app. After you set up your developer account with these social providers you can configure the `Auth` category by running `amplify add auth` and selecting the social provider option. You can then use `signInWithRedirect()` in your app to either show a pre-built "Hosted UI" or pass in a provider name (e.g. `signInWithRedirect({provider:'Facebook'})`) to interface directly and build your own UI.  
 
 </Accordion>
 
@@ -84,15 +84,15 @@ Before you configure social sign-in with Amplify Auth you will need to set up yo
 
 2. [Sign in](https://developers.facebook.com/) with your Facebook credentials.
 
-3. Choose _My Apps_ from the top navigation bar, and on the page that loads choose _Create App_. ![Create App button in the My Apps page of the Facebook developer account.](/images/cognitoHostedUI/facebook1.png)
+3. Choose _My Apps_ from the top navigation bar, and on the page that loads choose _Create App_.  
 
-4. For your use case, choose _Set up Facebook Login_. ![Set up Facebook Login option selected from list.](/images/cognitoHostedUI/facebook2.png)
+4. For your use case, choose _Set up Facebook Login_.  
 
 5. For platform, choose _Website_ and select _No, I'm not building a game_.
 
-6. Give your Facebook app a name and choose _Create app_. ![Form fields for the Facebook create app form.](/images/cognitoHostedUI/facebook3.png)
+6. Give your Facebook app a name and choose _Create app_.  
 
-7. On the left navigation bar, choose _Settings_ and then _Basic_. ![App ID and App Secret in the basic settings tab of the dashboard.](/images/cognitoHostedUI/facebook4.png)
+7. On the left navigation bar, choose _Settings_ and then _Basic_.  
 
 8. Note the _App ID_ and the _App Secret_. You will use them in the next section in the CLI flow.
 
@@ -101,21 +101,21 @@ Before you configure social sign-in with Amplify Auth you will need to set up yo
 
 1. Go to [Google developer console](https://console.developers.google.com).
 
-2. Click _Select a project_. ![Select a project button on the nav bar is circled.](/images/cognitoHostedUI/google1.png)
+2. Click _Select a project_.  
 
-3. Click _NEW PROJECT_. ![The new project button is circled on the select a project popup.](/images/cognitoHostedUI/google2.png)
+3. Click _NEW PROJECT_.  
 
-4. Type in project name and click _CREATE_. ![The create button is circled in the new project page.](/images/cognitoHostedUI/google3.png)
+4. Type in project name and click _CREATE_.  
 
-5. Once the project is created, from the left navigation menu, select _APIs & Services_, then select _Credentials_. ![The top left menu icon is selected, then the APIs and services option, then the credentials option.](/images/cognitoHostedUI/google4.png)
+5. Once the project is created, from the left navigation menu, select _APIs & Services_, then select _Credentials_.  
 
-6. Click _CONFIGURE CONSENT SCREEN_. ![The configure consent screen button is circled in the oauth consent screen section.](/images/cognitoHostedUI/google5.png)
+6. Click _CONFIGURE CONSENT SCREEN_.  
 
-7. Click _CREATE_. ![The create button is circled in the OAuth consent screen section.](/images/cognitoHostedUI/google6.png)
+7. Click _CREATE_.  
 
 8. Type in _App Information_ and _Developer contact information_ which are required fields and click _SAVE AND CONTINUE_ three times (OAuth consent screen -> Scopes -> Test Users) to finish setting up the consent screen.
 
-9. Back under the _Credentials_ tab, Create your OAuth2.0 credentials by choosing _OAuth client ID_ from the _Create credentials_ drop-down list. ![The Create credentials button is circled, then the oauth client ID button is circled in the credentials section.](/images/cognitoHostedUI/google7.png).
+9. Back under the _Credentials_ tab, Create your OAuth2.0 credentials by choosing _OAuth client ID_ from the _Create credentials_ drop-down list.  .
 
 10. Choose _Web application_ as _Application type_ and name your OAuth Client.
 
@@ -132,13 +132,13 @@ Before you configure social sign-in with Amplify Auth you will need to set up yo
 
 2. [Sign in](https://developer.amazon.com/loginwithamazon/console/site/lwa/overview.html) with your Amazon credentials.
 
-3. You need to create an Amazon security profile to receive the Amazon Client ID and Client Secret. Choose _Create a Security Profile_. ![The login with Amazon console with a create a new security profile button displayed.](/images/cognitoHostedUI/amazon1.png)
+3. You need to create an Amazon security profile to receive the Amazon Client ID and Client Secret. Choose _Create a Security Profile_.  
 
-4. Type in a _Security Profile Name_, a _Security Profile Description_, and a _Consent Privacy Notice URL_. ![Security profile management page with steps to fill out a form for the new security profile.](/images/cognitoHostedUI/amazon2.png)
+4. Type in a _Security Profile Name_, a _Security Profile Description_, and a _Consent Privacy Notice URL_.  
 
 5. Choose _Save_.
 
-6. Choose _Show Client ID_ and _Client Secret_ to show the client ID and secret. You will need them for the next section in the CLI flow. ![Choosing client ID and client secret.](/images/cognitoHostedUI/amazon3.png)
+6. Choose _Show Client ID_ and _Client Secret_ to show the client ID and secret. You will need them for the next section in the CLI flow.  
 
 </Block>
 
@@ -156,7 +156,7 @@ Before you configure social sign-in with Amplify Auth you will need to set up yo
 
 6. On the _Register an App ID_ page, under _App ID Prefix_, take note of the _Team ID_ value.
 
-7. Provide a description in the _Description_ text box and provide the `bundleID` of the iOS app. ![Register an App ID in the certificates, identifiers and profiles section.](/images/cognitoHostedUI/apple1.png)
+7. Provide a description in the _Description_ text box and provide the `bundleID` of the iOS app.  
 
 8. Under _Capabilities_, select _Sign in with Apple_.
 
@@ -166,7 +166,7 @@ Before you configure social sign-in with Amplify Auth you will need to set up yo
 
 11. Select the _plus icon (+)_ and, on the _Register a New Identifier_ page, select _Services IDs_.
 
-12. Provide a description in the _Description_ text box and provide an identifier for the Service ID. ![Register a services ID in the certificates, identifiers and profiles section.](/images/cognitoHostedUI/apple2.png)
+12. Provide a description in the _Description_ text box and provide an identifier for the Service ID.  
 
 13. Select _Continue_ and register the Service ID.
 
@@ -264,13 +264,13 @@ You need to now inform your social provider of this URL:
 
 3. On the left navigation bar, choose _Products_. Add _Facebook Login_ if it isn't already added.
 
-4. If already added, choose _Settings_ under the _Configure_ dropdown. ![The Settings option is circled from the configure dropdown.](/images/cognitoHostedUI/facebook5.png)
+4. If already added, choose _Settings_ under the _Configure_ dropdown.  
 
 5. Under _Valid OAuth Redirect URIs_ type your user pool domain with the `/oauth2/idpresponse` endpoint.
 
    `https://<your-user-pool-domain>/oauth2/idpresponse`
 
-![Userpool domain is pasted into the text field with /oauth2/ endpoint.](/images/cognitoHostedUI/facebook6.png)
+ 
 
 6. Save your changes.
 
@@ -289,7 +289,7 @@ You need to now inform your social provider of this URL:
 
 6. Type your user pool domain with the `/oauth2/idpresponse` endpoint into _Authorized Redirect URIs_.
 
-   ![The URLs 1 form fields for authorized Javascript origins and authorized redirect URLs are circled.](/images/cognitoHostedUI/google8.png)
+    
 
    Note: If you saw an error message `Invalid Redirect: domain must be added to the authorized domains list before submitting.` when adding the endpoint, please go to the _Authorized Domains List_ and add the domain.
 
@@ -300,9 +300,9 @@ You need to now inform your social provider of this URL:
 
 1. [Sign in](https://developer.amazon.com/loginwithamazon/console/site/lwa/overview.html) with your Amazon credentials.
 
-2. Hover over the gear and choose _Web Settings_ associated with the security profile you created in the previous step, and then choose _Edit_. ![The web settings option is selected in the dropdown menu from the gear icon.](/images/cognitoHostedUI/amazon4.png)
+2. Hover over the gear and choose _Web Settings_ associated with the security profile you created in the previous step, and then choose _Edit_.  
 
-3. Type your user pool domain into _Allowed Origins_ and type your user pool domain with the `/oauth2/idpresponse` endpoint into _Allowed Return URLs_. ![Userpool domain is typed into the allowed origins field with /oauth2/ as the endpoint in the Allowed Return URLs field.](/images/cognitoHostedUI/amazon5.png)
+3. Type your user pool domain into _Allowed Origins_ and type your user pool domain with the `/oauth2/idpresponse` endpoint into _Allowed Return URLs_.  
 
 4. Choose _Save_.
 
@@ -323,7 +323,7 @@ You need to now inform your social provider of this URL:
 
 7. Type your user pool domain into _Domains and Subdomains_.
 
-8. Type your user pool domain with the `/oauth2/idpresponse` endpoint into _Return URLs_. ![The return URLs text field is selected.](/images/cognitoHostedUI/apple3.png)
+8. Type your user pool domain with the `/oauth2/idpresponse` endpoint into _Return URLs_.  
 
 9. Click _Next_, review the information, then select _Done_.
 
@@ -335,7 +335,7 @@ You need to now inform your social provider of this URL:
 
 13. Provide a name for the key under _Key Name_.
 
-14. Enable _Sign in with Apple_ and select _Configure_. ![The sign in with apple option is enabled and the key name text field is filled out.](/images/cognitoHostedUI/apple4.png)
+14. Enable _Sign in with Apple_ and select _Configure_.  
 
 15. Under _Primary App ID_ select the App ID that was created before.
 
@@ -343,7 +343,7 @@ You need to now inform your social provider of this URL:
 
 17. On _Register a New Key_ click _Continue_, review the information, then select _Register_.
 
-18. You will be redirected to a new page. Take note of the _Key ID_ and download the .p8 file containing the private key. ![The download key page is shown with the option to download the .p8 file with the private key.](/images/cognitoHostedUI/apple5.png)
+18. You will be redirected to a new page. Take note of the _Key ID_ and download the .p8 file containing the private key.  
 
 </Block>
 </BlockSwitcher>

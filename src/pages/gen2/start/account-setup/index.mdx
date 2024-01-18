@@ -48,37 +48,37 @@ This command will ask you if you have already configured IAM user credentials. E
 2. Navigate to the [IAM User creation page](https://console.aws.amazon.com/iamv2/home#/users/create)
 3. Specify a user name and select **Next**. You can name the user anything but we will call it "amplify-dev"
 
-  ![AWS IAM user creation dialog with "amplify-dev" input as the user name](/images/gen2/account-setup/user1.png)
+   
 
 4. Select **Attach policies directly** and select **AmplifyBackendDeployFullAccess** as the Permissions policy
 
-  ![AWS IAM "set permissions" view with the "AmplifyBackendDeployFullAccess" managed policy selected](/images/gen2/account-setup/user2.png)
+   
 
 5. Select **Next**
 6. On the Review page, check that everything looks good and select **Create user**
 
-  ![AWS IAM "review and create" view with relevant information from previous steps](/images/gen2/account-setup/user3.png)
+   
 
 7. This will redirect to the _Users_ list page. Select the user you just created
 
-  ![AWS IAM users page with "amplify-dev" selected](/images/gen2/account-setup/user4.png)
+   
 
 8. On the user details page, navigate to the **Security credentials** tab, scroll down to **Access keys** and select **Create access keys**
 
-  ![AWS IAM user security credentials tab](/images/gen2/account-setup/user5.png)
+   
 
 9. On the next page, select **Command Line Interface**, acknowledge the warning, and select **Next**.
 
-  ![AWS IAM access key best practices & alternatives page with "command line interface" selected](/images/gen2/account-setup/user6.png)
+   
 
 10. On the next page select **Create access key**. You will then see a page with the access keys for the user. Use the copy icon to copy these values to your clipboard, then return to the CLI
 
-  ![AWS IAM "retrieve access keys" page showing to use the "copy" icon for the Access key and Security access key](/images/gen2/account-setup/user7.png)
+   
 
 11. Next, enter the credentials of the newly created IAM user, including the access key, secret access key, and lastly select the AWS region to use with the profile.
 
   {/* @TODO replace this image with one that calls the profile `amplify-dev` */}
-  ![Terminal running "npx amplify configure profile"](/images/gen2/account-setup/profile1.png)
+   
 
 ## Configure IAM Identity Center
 
@@ -93,55 +93,55 @@ The information presented below can also be found on the [official AWS documenta
 1. Sign in to the [AWS Management Console](https://console.aws.amazon.com/)
 2. Navigate to the [IAM Identity Center page](https://console.aws.amazon.com/singlesignon/home)
 
-  ![AWS Console with search opened for "IAM Identity Center"](/images/gen2/account-setup/console-search-iam-identity-center.png)
+   
 
 3. Select **Enable**
 
-  ![AWS IAM Identity Center page indicating the "enable" button](/images/gen2/account-setup/sso-enable.png)
+   
 
 4. A dialog will open and prompt for "how you would like to configure IAM Identity Center in your AWS environment", choose "AWS Organizations" and select **Continue**
 
-  ![AWS IAM Identity Center enable dialog with AWS Organizations, indicating to "continue"](/images/gen2/account-setup/sso-enable-dialog.png)
+   
 
 5. After the AWS Organization is created and IAM Identity Center is enabled you are presented with a dashboard. In the navigation pane, select **Permission sets**
 
-  ![AWS IAM Identity Center dashboard indicating "permission sets" in the navigation pane](/images/gen2/account-setup/sso-dashboard-highlight-permission-sets.png)
+   
 
 6. Select **Create permission set**
 7. When prompted for the permission set type, choose **Custom permission set**. Then select **Next**
 8. Expand **AWS Managed Policies (set)** and search for _amplify_. Check **AmplifyBackendDeployFullAccess** and select **Next**
 
-  ![AWS IAM Identity Center custom permission set page with the "AmplifyBackendDeployFullAccess" AWS managed policy checked](/images/gen2/account-setup/sso-permission-set-custom.png)
+   
 
 8. Name the permission set "AmplifySet" and optionally change the session duration. Select **Next**
 
-  ![AWS IAM Identity Center custom permission set details page with the name "AmplifySet"](/images/gen2/account-setup/sso-permission-set-custom-details.png)
+   
 
 9. Review the permission set and select **Create**
 10. After creation you are navigated back to the IAM Identity Center dashboard and are ready to create your first user. Using the navigation pane, select **Users**
 11. Enter the user details, then select **Next**
 
-  ![AWS IAM Identity Center user creation with the username "amplify-admin"](/images/gen2/account-setup/sso-create-user.png)
+   
 
 12. Optionally create and add the user to a group, select **Next**
 13. Review the user information and select **Add user**. The user will then need to verify their email using the email specified during user creation.
 14. After user creation you are navigated back to the IAM Identity Center dashboard and are ready to assign the newly-created user to have access to an AWS account. For the sake of the demo we will use the AWS account we used to create the Organization, however you can create a new AWS account under your organization for use with Amplify. Check the management AWS account and select **Assign users or groups**
 
-  ![AWS IAM Identity Center "AWS accounts" page with the management account checked](/images/gen2/account-setup/sso-aws-accounts.png)
+   
 
 15. When prompted to assign a user or group, select the **Users** tab, check the user created in step 13, and select **Next**
   
-  ![AWS IAM Identity Center "AWS accounts" page assigning "amplify-admin" to the management AWS account](/images/gen2/account-setup/sso-aws-accounts-add-user.png)
+   
 
 16. Assign the permission set created in step 9 and select **Next**
 17. Review the assignment information and select **Submit**
 18. Now you are ready to sign in to the access portal! Navigate back to the IAM Identity Center dashboard. Within the "Settings summary" pane, copy the URL for your "AWS access portal URL"
 
-  ![AWS IAM Identity Center dashboard highlighting the AWS access portal URL](/images/gen2/account-setup/sso-dashboard-access-portal.png)
+   
 
 19. Navigate to the copied URL and sign in as your user, "amplify-admin". After signing in you should see you have access to an AWS account and are ready to get started!
 
-  ![AWS IAM Identity Center access portal displaying an AWS account](/images/gen2/account-setup/sso-access-portal.png)
+   
 
 20. Back in your terminal, you are ready to configure an AWS profile that uses the SSO user. There are a few options for [getting IAM Identity Center user credentials](https://docs.aws.amazon.com/singlesignon/latest/userguide/howtogetcredentials.html), however we will use the AWS CLI configuration wizard. In your terminal, run `aws configure sso`
 
@@ -220,17 +220,17 @@ You can set up distinct profiles for each developer on your team and they can no
 npx amplify sandbox --profile <value>
 ```
 
-![](/images/gen2/account-setup/profile4.png)
+ 
 
 During the first time setup, `amplify sandbox` will ask you to sign into the AWS Console. Once you're signed in, you will be redirected to the Amplify Console. Select **Initialize setup now**.
 
-![](/images/gen2/account-setup/profile5.png)
+ 
 
 It may take a few minutes for the bootstrapping process to complete.
 
-![](/images/gen2/account-setup/profile6.png)
+ 
 
-![](/images/gen2/account-setup/profile7.png)
+ 
 
 Done! You have successfully completed the bootstrapping process and you can now return to the terminal to create a new Amplify Sandbox environment:
 

@@ -50,15 +50,15 @@ If you have relationships in your data models, but your connected forms are miss
 
 When a form submitter selects an autocomplete field in your form, it will be populated with a list of related records. By default, these records will be labeled with the first field in the data model, a hyphen, and the record's ID.
 
-![Input settings bar showing the default labeling of a relationship](/images/console/formbuilder/autocomplete1.png)
+ 
 
 In this example, the form creates a new author, and lets the user look up the related book. The first field in the `Book` model is `ISBN`, so the label displays as:
 
-![Screenshot of a label with the ISBN and ID of the book, which is challenging for the user to read](/images/console/formbuilder/autocomplete2.png)
+ 
 
 To make this more useful for the form submitter, you can customize the label with any fields in the model, and string concatenation. In this example, the book's `name` field, a comma, and the `year` field makes more sense.
 
-![Screenshot of a label with the book name and year, which is easier for the user to read](/images/console/formbuilder/autocomplete3.png)
+ 
 
 ### Using forms with relationships in code
 
@@ -114,7 +114,7 @@ _Add Storage Manager to a connected form..._
 3. Select the `string` field you would like to convert to a Storage Manager field
 4. In the **Display** section of the **Input settings** sidebar, select the **Type** dropdown and choose `StorageField`
 
-![screenshot of a text field being converted to a storage manager field](/images/console/formbuilder/storage1.png)
+ 
 
 <Callout info>
 
@@ -131,7 +131,7 @@ _Add a Storage Manager field to an unconnected form..._
 3. Click the blue plus sign to add a new field to your form
 4. Select a `StorageField` input element
 
-![screenshot of a storage field being added to an unconnected form](/images/console/formbuilder/storage3.png)
+ 
 
 With all unconnected forms, the form submission must be configured manually. Use the `onSubmit` hook and the `fields` object to [handle submission in code](/[platform]/build-ui/formbuilder/lifecycle/#handle-form-data-submissions---onsubmit).
 

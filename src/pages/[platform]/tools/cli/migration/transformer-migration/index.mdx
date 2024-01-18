@@ -118,14 +118,14 @@ To help you migrate to the GraphQL transformer v2, `amplify migrate api` has bee
       - Add the `@index` directive to the field and supply the name parameter with the `@key` directive’s keyName parameter.
       - If sort keys are used: Provide the sort key field names as an array to the `@index`’s sortKeyFields parameter.
       - If a custom queryField is used: Provide the queryField name via the `@index`’s queryField parameter.
-  - ![Screenshot visually showing the @key directive migration](/images/cli/graphql/key-migration.png)
+  -  
 - The GraphQL API's authorization is now “deny by default”, meaning that clients cannot access the stored data unless an authorization rule is specified.
   - _*Migration:*_
     - For `@model` types that don’t have an authorization rule configured based on your GraphQL API's default authorization mode, you now have to explicitly set the `@auth` rule using the default authorization mode.
-  - ![Screenshot visually showing the default authorization mode migration](/images/cli/graphql/default-auth-mode-migration.png)
+  -  
 - `@auth`’s owner-based authorization will be configured with an “allow”-based model instead of a “deny-based” system
   - _*Migration:*_ First, identify if you have omitted any “operations” from the “operations” parameter. In transformer v1, the specified operations are the ones that “others“ are denied access to. In transformer v2, apply the omitted operations to the ”private“ rule.
-  - ![Screenshot visually showing the original owner authorization rule and the migrated rule with deny by default](/images/cli/graphql/owner-auth-migration.png)
+  -  
 - Field-level authorization rules need to be rewritten to explicitly specify who is granted which type of access for a given field. A field rule will override any existing object rules. To maintain the object rule it needs to be specified again on the field. If a rule is only listed on the field and not the object, access is denied to all other fields.
   - Some directives implicitly create fields. These fields cannot utilize field-level authorization because they are not specified in the input schema.
 - In v1 of the GraphQL Transformer, when combining `@searchable` with `@auth`, the total count in a search result contained records that the user was not authorized to access. In v2 of the GraphQL Transformer, the total count only contains results that the user is authorized to access. Similarly, to run an aggregation on a field, the user must have read access to that field.
